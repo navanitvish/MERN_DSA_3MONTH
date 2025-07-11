@@ -1,0 +1,101 @@
+What are Arrays? :
+An array is a collection of elements of the same type stored at contiguous memory locations.
+or
+Arrays are ordered collections of elements (indexed from 0).
+
+In Interviews:
+
+Arrays are used in most problems (search, sort, sliding window, etc.).
+
+Common Operations:
+
+Operation	        Time Complexity
+Access	               O(1)
+Insert at end	       O(1)
+Insert in middle	   O(n)
+Search	               O(n)
+
+
+
+Common Methods:
+1️⃣ push(): Adds an element to the end.
+Example:
+let arr = [1, 2];
+arr.push(3); // [1, 2, 3]
+
+
+2️⃣ pop(): Removes the last element.
+
+Example:
+arr.pop(); // [1, 2]
+3️⃣ shift() / unshift()
+
+shift() removes from start.
+
+unshift() adds to start.
+
+javascript
+Copy code
+arr.unshift(0); // [0, 1, 2]
+arr.shift(); // [1, 2]
+4️⃣ splice()
+
+Remove or replace elements in place.
+
+javascript
+Copy code
+arr.splice(1, 1); // Removes 1 element at index 1
+Real-World Example
+You fetch API data into an array of users.
+
+You might map() to render them in React.
+
+You might filter() to remove inactive users.
+
+Real-World Example:
+You fetch API data into an array of users.
+You might map() to render them in React.
+You might filter() to remove inactive users.
+
+
+
+ Summary of Day 1
+✅ JavaScript Topics:
+
+What is ES6?
+
+Why use let and const?
+
+Differences from var
+
+Real-world examples (config constants, counters)
+
+Interview readiness
+
+✅ DSA Arrays:
+
+Definition & complexity
+
+Basic operations
+
+Common problems to solve:
+
+Reverse array
+
+Find max/min
+
+Sum elements
+
+Remove duplicates
+
+Merge two arrays
+
+✅ Development Purpose:
+
+Use arrays to store lists of data in your apps.
+
+Use let and const consistently in all modern JavaScript.
+
+✅ Interview Purpose:
+
+You will be asked about scoping (var vs let vs const) and basic array manipulations frequently.

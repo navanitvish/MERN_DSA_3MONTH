@@ -1,0 +1,67 @@
+JavaScript ES6
+ what is ES6 :- ES6 (ECAMCScript 2015 ) is major update to javaScript that introduced mordern syntax and features to make code cleaner ,modular and easier to maintain
+
+
+✨ Why it matters:
+-Development: Almost every modern project uses ES6 syntax (React, Node).
+
+-Interviews: You will be asked about ES6 features like let/const, arrow functions, destructuring, template literals, etc.
+
+
+🟢 let and const:-
+
+1️⃣ let:
+Used to declare block-scoped variables.
+
+Can be reassigned, but not redeclared in the same scope.
+
+Example:
+let counter = 0;
+counter = counter + 1; // ✅ Works fine
+
+but in Block Scope:
+{
+  let name = "Alice";
+}
+console.log(name); // ❌ ReferenceError: name is not defined
+
+
+🔹 Interview Tip:
+What is the difference between var and let?
+✅ var is function-scoped and hoisted.
+✅ let is block-scoped and not initialized until declaration.
+
+
+
+2️⃣ const
+Declares block-scoped constants.
+
+Must be initialized at declaration.
+
+Cannot be reassigned, but object properties CAN be mutated.
+
+Example:
+const API_KEY = "abc123";
+API_KEY = "def456"; // ❌ TypeError: Assignment to constant variable
+
+Mutating object:
+const user = { name: "Alice" };
+user.name = "Bob"; // ✅ This is allowed
+
+🔹 Interview Tip:
+
+Can you modify a const object?
+✅ Yes, you can mutate properties.
+✅ You cannot reassign the variable itself.
+
+
+3️⃣ When to use?
+Use const by default.
+
+Use let if you expect to reassign.
+
+Example in development:
+
+const BASE_URL = "https://api.example.com";
+let page = 1;
+page = 2;
