@@ -42,6 +42,72 @@
 // javascript
 // Copy
 // Edit
+
+
+// for loop
+// for (let i = 0; i <= 5; i++) {
+//     console.log(i);
+// }
+
+// // while loop
+// let i =1;
+
+// while(i<=5){
+//     console.log(i);
+//     i++;
+// }
+
+// do while loop
+// let i = 1;
+// do{
+//     console.log("number",i);
+//     i++;
+// }while(i<=5);
+
+// for of loop
+let fruits = ["apple", "banana", "orange"];
+for (let fruit of fruits){
+  console.log("fruit",fruit);
+}
+
+// for in loop
+let person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+for (let key in person){
+  console.log("key",key);
+  console.log("value",person[key]);
+  console.log(key,":",person[key])
+}
+
+
+// check prime number
+let num=8;
+let isPrime = true;
+for (let i = 2; i <= Math.sqrt(num); i++) {
+  if (num % i == 0) {
+    isPrime = false;
+    break;
+  }
+}
+console.log(isPrime ? "prime" : "not prime");
+
+
+// fibonacci series
+let n = 5;
+let a=0,b=1;
+for (let i = 0; i < n; i++) {
+  console.log(a);
+  let c=a+b;
+  a=b;
+  b=c;
+}
+
+
+
+
 function reverseArray(arr) {
   let left = 0;
   let right = arr.length - 1;
