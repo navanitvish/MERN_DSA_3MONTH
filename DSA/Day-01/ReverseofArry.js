@@ -108,6 +108,19 @@ for (let i = 0; i < n; i++) {
 
 
 
+// ✅ Task 1: Reverse an Array (without using reverse())
+// 🔹 Problem
+
+// Given an array → reverse it in-place.
+
+// 🔹 Approach
+
+// Use two pointers: left (start), right (end).
+
+// Swap elements until left < right.
+
+// 🔹 Code
+
 function reverseArray(arr) {
   let left = 0;
   let right = arr.length - 1;
@@ -119,3 +132,14 @@ function reverseArray(arr) {
   return arr;
 }
 console.log(reverseArray([1,2,3,4,5]));
+
+
+// Dry Run
+// arr = [1,2,3,4,5]
+// left=0, right=4 → swap → [5,2,3,4,1]
+// left=1, right=3 → swap → [5,4,3,2,1]
+// left=2, right=2 → stop
+// output= 54321
+
+
+

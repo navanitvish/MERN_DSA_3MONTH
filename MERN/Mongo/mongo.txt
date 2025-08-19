@@ -1,0 +1,98 @@
+What is MongoDB?
+MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It’s ideal for backend applications that need scalability, speed, and schema flexibility.
+
+🔹 Key Concepts in MongoDB:
+Document: A record in MongoDB (like a row in SQL).
+
+Collection: A group of related documents (like a table).
+
+_id: Unique identifier for each document.
+
+BSON: Binary JSON format used internally.
+
+🔸 What is Mongoose?
+Mongoose is an ODM (Object Data Modeling) library for MongoDB and Node.js. It helps you:
+
+Define schemas for your data
+
+Validate data types
+
+Use built-in methods to interact with MongoDB easily
+
+🧠 Mongoose Basics (Code Snippet)
+js
+Copy
+Edit
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/backendDB')
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.log(err));
+
+// Define Schema
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  age: Number
+});
+
+// Create Model
+const User = mongoose.model('User', userSchema);
+
+// Create Document
+const newUser = new User({
+  name: 'Navanit',
+  email: 'navanit@example.com',
+  age: 22
+});
+
+newUser.save();
+📌 Learning Summary
+✅ Installed & connected MongoDB with Node.js
+
+✅ Created basic schema and model using Mongoose
+
+✅ Inserted a document into the database
+
+✅ Day 12: CRUD Operations with MongoDB + Mongoose
+Today, you practiced CRUD (Create, Read, Update, Delete) operations using Mongoose with MongoDB in a Node.js environment. This is a core concept for building any backend API!
+
+🧩 CRUD Explained:
+📌 Create – Add new data
+js
+Copy
+Edit
+const user = new User({ name: "John", email: "john@example.com", age: 25 });
+user.save();
+🔍 Read – Fetch data
+js
+Copy
+Edit
+User.find()              // get all users
+User.findById('id')      // find by ID
+User.findOne({ name: 'John' }) // find one
+🔁 Update – Modify existing data
+js
+Copy
+Edit
+User.findByIdAndUpdate("id", { age: 30 });
+❌ Delete – Remove data
+js
+Copy
+Edit
+User.findByIdAndDelete("id");
+📌 Bonus Concepts:
+.save() → saves a new document
+
+.find() → returns an array
+
+.findOne() / .findById() → returns a single document
+
+.findByIdAndUpdate() / .findByIdAndDelete() → updates/deletes a specific document by ID
+
+🧠 What You Learned:
+How to structure CRUD endpoints
+
+Best practices for querying MongoDB documents
+
+How to handle data with async/await and error handling

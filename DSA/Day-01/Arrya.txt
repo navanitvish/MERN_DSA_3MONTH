@@ -38,14 +38,13 @@ javascript
 Copy code
 arr.unshift(0); // [0, 1, 2]
 arr.shift(); // [1, 2]
+
+
 4️⃣ splice()
-
 Remove or replace elements in place.
-
-javascript
-Copy code
 arr.splice(1, 1); // Removes 1 element at index 1
-Real-World Example
+
+Real-World Example:
 You fetch API data into an array of users.
 
 You might map() to render them in React.

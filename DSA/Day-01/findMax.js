@@ -1,4 +1,4 @@
-// ✅ Reverse an array
+// ✅ Reverse an array using reverse method
 function reverseArray(arr) {
     return arr.reverse();
 }
